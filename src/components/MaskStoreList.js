@@ -1,19 +1,25 @@
 import React from "react";
 import { Collapse, Card, Tag } from "antd";
+import { useSelector } from "react-redux";
 
 const { Panel } = Collapse;
 
-const MaskStoreList = ({ stores, address }) => {
+const MaskStoreList = () => {
+
+  const { storeList } = useSelector(state => ({
+    storeList: state.maskMap.storeList,
+  }));
 
   return (
     <div className="more_Info">
-      <Collapse style={{ maxWidth: 500, margin: "auto", marginBottom: 13 }}>
-        <Panel header={address + "의 현재 구매 가능한 마스크 판매처"} key="maskMap">
+      <Collapse style={{ maxWidth: 500, margin: "auto", marginBottom: 13, marginTop: 15 }}>
+        <Panel header={"지도의 기준 현재 구매 가능한 마스크 판매처"} key="maskMap">
           <h3 style={{textAlign:"left"}}>
+            <p>지도의 중심 기준 1000M 반경의 판매처를 가지고 사용합니다.</p>
             <p>현재 구매 가능한 구매처만 목록화 했습니다.</p>
             <p>해당 카드를 클릭 하시면 판매처 주소를 확인 할 수 있습니다.</p>
           </h3>
-          {stores.map((value, index) => (
+          {storeList.map((value, index) => (
             typeof value.remain_stat !== "undefined"  && value.remain_stat !== ""  && value.remain_stat !== null && value.remain_stat !== "break" && value.remain_stat !== "empty" &&
               <a href={"https://map.kakao.com/link/map/" + value.name + "," + value.lat + "," + value.lng} target="_blank" key={value.code}>
                 <Card style={{ maxWidth: 500, margin: "auto", marginBottom: 13 }}

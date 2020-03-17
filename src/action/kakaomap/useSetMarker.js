@@ -16,7 +16,6 @@ const useSetMarker = () => {
     oldMarker: state.maskMap.oldMarker,
     oldOverlay: state.maskMap.oldOverlay
   }));
-  console.log(oldMarker);
   const dispatcher = useDispatch();
 
 
