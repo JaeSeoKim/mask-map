@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import useIpAddr from "../useIpAddr";
 
 const { kakao } = window
 
@@ -8,6 +9,8 @@ const useGeolocation = () => {
 
   const { map } = useSelector(state => ({ map: state.maskMap.map }), []);
 
+  const { getIpAddr } = useIpAddr();
+
   kakaoMap = map;
   
   const getGeo = () => {
@@ -16,7 +19,7 @@ const useGeolocation = () => {
         navigator.geolocation.getCurrentPosition(position => {
           kakaoMap.panTo(new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude));
         }
-        );
+        ,()=> getIpAddr());
       }
     } else {
       alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
