@@ -10,17 +10,11 @@ import MaskStoreList from "../components/MaskStoreList";
 
 const MaskMap = () => {
 
-  const { getMaskDataGeo } = useMaskData();
-  const { setMarker } = useSetMarker();
   const { getGeo } = useGeolocation();
   const { setEvent } = useCenterChanged();
-  const { getIpAddr } = useIpAddr();
   useEffect(() => {
-    getMaskDataGeo(37.4388, 127.1396, 10000).then(() => {
-      getGeo();
-      setMarker();
-      setEvent();
-    });
+    getGeo();
+    setEvent();
   }, []);
   return <div>
     <div>

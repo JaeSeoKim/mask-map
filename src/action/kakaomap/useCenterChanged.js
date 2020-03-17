@@ -23,7 +23,7 @@ const useCenterChanged = () => {
       // 지도의 중심좌표를 얻어옵니다 
       var latlng = kakaoMap.getCenter();
 
-      getMaskDataGeo(latlng.getLat(), latlng.getLng(), 10000);
+      getMaskDataGeo(latlng.getLat(), latlng.getLng(), 3000);
 
       console.log(latlng.getLat(), latlng.getLng());
 
