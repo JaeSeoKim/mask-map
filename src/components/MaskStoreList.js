@@ -6,6 +6,7 @@ const { Panel } = Collapse;
 const { kakao } = window;
 
 var kakaoMap = null;
+var stores = [];
 
 const MaskStoreList = () => {
 
@@ -15,6 +16,7 @@ const MaskStoreList = () => {
   }));
 
   kakaoMap = map;
+  stores = storeList;
 
   const onclickHandle = (lat, lng) => {
     kakaoMap.panTo(new kakao.maps.LatLng(lat, lng));
@@ -39,7 +41,7 @@ const MaskStoreList = () => {
       <Collapse style={{ maxWidth: 500, margin: "auto", marginBottom: 13, marginTop: 15 }}>
         <Panel header={"지도의 기준 현재 구매 가능한 마스크 판매처"} key="maskMap">
           <h3 style={{ textAlign: "left" }}>
-            <p>지도의 중심 기준 1000M 반경의 판매처를 가지고 사용합니다.</p>
+            <p>지도의 중심 기준 1KM 반경의 판매처를 가지고 사용합니다.</p>
             <p>현재 1개 이상 재고를 소유한 판매처만 목록화 했습니다.</p>
             <p>해당 카드를 클릭 하시면 지도가 해당 판매처를 가리키게 됩니다!</p>
           </h3>
