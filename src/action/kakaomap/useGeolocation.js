@@ -1,6 +1,4 @@
-/*global kakao*/
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
 
 const { kakao } = window
 

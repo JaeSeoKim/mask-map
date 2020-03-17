@@ -1,7 +1,5 @@
-/*global kakao*/
 import { useSelector, useDispatch } from "react-redux";
 import { actionCreators } from "../../store/store";
-import { Layout } from "antd";
 
 const { kakao } = window;
 
@@ -84,7 +82,7 @@ const useSetMarker = () => {
       }
 
       const content =
-        `<div style="margin-bottom: 40px;">` +
+        `<div style="margin-bottom: 40px; width: 300px;">` +
         `  <div class="ant-card ant-card-bordered ant-card-hoverable" style="font-size: 12px; border-radius: 5px;">` +
         `    <div class="ant-card-head" style="padding: 10px;">` +
         `      <div class="ant-card-head-wrapper" >` +
@@ -95,7 +93,7 @@ const useSetMarker = () => {
         `    </div>` +
         `    <div class="ant-card-body" style="text-align: left; padding: 10px;">` +
         `      <a href="https://map.kakao.com/link/map/${value.name},${value.lat},${value.lng}" target="_blank" >` +
-        `       <p>주소: ${value.addr}</p>` +
+        `       <p style="width:290px; white-space:normal; ">주소: ${value.addr}</p>` +
         `      </a>` +
         `       <p>생성시간: ${value.created_at}</p>` +
         `       <p>입고시간: ${value.stock_at}</p>` +

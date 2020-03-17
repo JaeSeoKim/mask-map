@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Axios from "axios";
-import useSetMarker from "./kakaomap/useSetMarker";
 import { useDispatch } from "react-redux";
 import { actionCreators } from "../store/store";
 
@@ -87,7 +86,6 @@ const useMaskData = () => {
       `https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat=${lat}&lng=${lng}&m=${m}`)
       .then(response => {
         const {
-          count,
           stores } = response.data
         dispatch(actionCreators.setStoreList(stores));
         console.log(stores.length);

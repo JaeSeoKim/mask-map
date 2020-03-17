@@ -1,8 +1,6 @@
-/*global kakao*/
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { actionCreators } from "../../store/store";
-import useSetMarker from "../../action/kakaomap/useSetMarker";
 
 const { kakao } = window;
 

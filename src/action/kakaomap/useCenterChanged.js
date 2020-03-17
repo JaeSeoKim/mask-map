@@ -1,4 +1,3 @@
-/*global kakao*/
 import { useSelector } from "react-redux";
 import useMaskData from "../useMaskData";
 import useSetMarker from "./useSetMarker";
@@ -8,7 +7,7 @@ const { kakao } = window;
 var kakaoMap = {};
 
 const useCenterChanged = () => {
-  const { map, storeList } = useSelector(state => ({
+  const { map } = useSelector(state => ({
     map: state.maskMap.map
   }));
 
@@ -20,9 +19,6 @@ const useCenterChanged = () => {
 
   const setEvent = () => {
     kakao.maps.event.addListener(kakaoMap, 'dragend', () => {
-
-      // 지도의  레벨을 얻어옵니다
-      var level = kakaoMap.getLevel();
 
       // 지도의 중심좌표를 얻어옵니다 
       var latlng = kakaoMap.getCenter();

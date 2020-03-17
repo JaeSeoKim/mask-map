@@ -7,6 +7,6 @@
 
 Geolocation 서비스 지원을 위해 [JaeSeoKim/disaster_message](https://github.com/JaeSeoKim/disaster_message) 와 분리됨 
 
-- [ ] [JaeSeoKim/disaster_message](https://github.com/JaeSeoKim/disaster_message) 와 기능을 분리 작업 필요
+- [x] [JaeSeoKim/disaster_message](https://github.com/JaeSeoKim/disaster_message) 와 기능을 분리 작업 필요
 - [ ] 추가 UI 개선 및 추가 제공 가능한 기능 서비스 개발 필요
 
