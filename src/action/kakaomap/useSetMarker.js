@@ -48,34 +48,34 @@ const useSetMarker = () => {
       var remain_color = ""
       switch (value.remain_stat) {
         case "plenty":
-          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/disaster_message/master/resource/maskMapMarker/green.png";
+          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/mask-map/master/resource/maskMapMarker/green.png";
           remain_stat = "100개 이상";
           remain_color = "#87d068";
           break;
         case "some":
-          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/disaster_message/master/resource/maskMapMarker/blue.png";
+          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/mask-map/master/resource/maskMapMarker/blue.png";
           remain_stat = "30개 이상 100개 미만";
           remain_color = "#2db7f5";
           break;
         case "few":
-          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/disaster_message/master/resource/maskMapMarker/red.png";
+          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/mask-map/master/resource/maskMapMarker/red.png";
           remain_stat = "30개 미만";
           remain_color = "#f50";
           break;
         case "empty":
-          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/disaster_message/master/resource/maskMapMarker/gray.png";
+          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/mask-map/master/resource/maskMapMarker/gray.png";
           remain_stat = "1개 이하";
           remain_color = "#A9A9A9";
           break;
         case "break":
-          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/disaster_message/master/resource/maskMapMarker/black.png";
+          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/mask-map/master/resource/maskMapMarker/black.png";
           remain_stat = "판매중지";
           remain_color = "#A9A9A9";
           //재고 없는 거는 화면에 표시 안함
           //return;
           break;
         default:
-          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/disaster_message/master/resource/maskMapMarker/black.png";
+          imageSrc = "https://raw.githubusercontent.com/JaeSeoKim/mask-map/master/resource/maskMapMarker/black.png";
           remain_stat = "ERROR";
           remain_color = "#A9A9A9";
           return;
