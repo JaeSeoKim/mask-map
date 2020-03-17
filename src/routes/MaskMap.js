@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
-import useMaskData from "../action/useMaskData";
 import KaKaoMap from "../components/kakaoMap/KakaoMap";
 import useGeolocation from "../action/kakaomap/useGeolocation";
-import useSetMarker from "../action/kakaomap/useSetMarker";
 import useCenterChanged from "../action/kakaomap/useCenterChanged";
-import useIpAddr from "../action/useIpAddr";
 import MaskStoreList from "../components/MaskStoreList";
+import { useSelector } from "react-redux";
 
 
 const MaskMap = () => {
+  const { map } = useSelector(state => ({ map: state.maskMap.map }), []);
 
   const { getGeo } = useGeolocation();
   const { setEvent } = useCenterChanged();
   useEffect(() => {
     getGeo();
     setEvent();
-  }, []);
+  }, [map]);
+  
   return <div>
     <div>
       <h3>공적 마스크 지도 입니다.</h3>

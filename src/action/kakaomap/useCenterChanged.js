@@ -4,7 +4,7 @@ import useSetMarker from "./useSetMarker";
 
 const { kakao } = window;
 
-var kakaoMap = {};
+var kakaoMap = null;
 
 const useCenterChanged = () => {
   const { map } = useSelector(state => ({
@@ -18,18 +18,20 @@ const useCenterChanged = () => {
   kakaoMap = map;
 
   const setEvent = () => {
-    kakao.maps.event.addListener(kakaoMap, 'dragend', () => {
+    if (kakaoMap !== null) {
+      kakao.maps.event.addListener(kakaoMap, 'dragend', () => {
 
-      // 지도의 중심좌표를 얻어옵니다 
-      var latlng = kakaoMap.getCenter();
+        // 지도의 중심좌표를 얻어옵니다 
+        var latlng = kakaoMap.getCenter();
 
-      getMaskDataGeo(latlng.getLat(), latlng.getLng(), 3000);
+        getMaskDataGeo(latlng.getLat(), latlng.getLng(), 3000);
 
-      console.log(latlng.getLat(), latlng.getLng());
+        console.log(latlng.getLat(), latlng.getLng());
 
-      setMarker();
+        setMarker();
 
-    });
+      });
+    }
   };
 
   return { setEvent };

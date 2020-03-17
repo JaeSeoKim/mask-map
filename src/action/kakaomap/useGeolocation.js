@@ -4,7 +4,7 @@ import useMaskData from "../useMaskData";
 import useSetMarker from "./useSetMarker";
 const { kakao } = window
 
-var kakaoMap= {};
+var kakaoMap = {};
 
 const useGeolocation = () => {
 
@@ -15,24 +15,24 @@ const useGeolocation = () => {
   const { setMarker } = useSetMarker();
 
   kakaoMap = map;
-  
+
   const getGeo = () => {
     if (navigator.geolocation) {
       if (kakaoMap !== null) {
         navigator.geolocation.getCurrentPosition(position => {
-          getMaskDataGeo(position.coords.latitude, position.coords.longitude,3000).then(()=>{
+          getMaskDataGeo(position.coords.latitude, position.coords.longitude, 3000).then(() => {
             setMarker();
           })
-          
+
           kakaoMap.panTo(new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude));
         }
-        ,()=> getIpAddr());
+          , () => getIpAddr());
       }
     } else {
       alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
     }
   }
-  return {getGeo} ;
+  return { getGeo };
 }
 
 export default useGeolocation;
