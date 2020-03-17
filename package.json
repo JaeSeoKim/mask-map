@@ -1,0 +1,46 @@
+{
+  "name": "disaster_message",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "https://api.dropper.tech",
+  "dependencies": {
+    "antd": "^4.0.2",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "cra-template": "1.0.2",
+    "gh-pages": "^2.2.0",
+    "http-proxy-middleware": "^1.0.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "redux": "^4.0.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": ".",
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "전세계": {},
+  "대한민국": {
+    "대한민국 전체 현황": "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11",
+    "시도별 발생 현황": "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13",
+    "강원도": "http://www.provin.gangwon.kr/covid-19.html",
+    "경기도": "https://www.gg.go.kr/contents/contents.do?ciIdx=1150&menuId=2909",
+    "경상남도": "http://xn--19-q81ii1knc140d892b.kr/main/main.do",
+    "경상북도": "http://www.gb.go.kr/Main/index.html",
+    "광주광역시": "https://www.gwangju.go.kr/",
+    "대구광역시": "http://www.daegu.go.kr/",
+    "대전광역시": "https://www.daejeon.go.kr/corona19/index.do",
+    "부산광역시": "http://www.busan.go.kr/corona19/index",
+    "서울특별시": "http://www.seoul.go.kr/coronaV/coronaStatus.do",
+    "울산광역시": "http://www.ulsan.go.kr/corona.jsp",
+    "인천광역시": "https://www.incheon.go.kr/corona19/IC010001",
+    "전라남도": "https://www.jeonnam.go.kr/coronaMainPage.do",
+    "전라북도": "http://www.jeonbuk.go.kr/index.jeonbuk",
+    "제주특별자치도": "https://www.jeju.go.kr/corona19.jsp",
+    "충청남도": "http://www.chungnam.go.kr/coronaStatus.do",
+    "충청북도": "http://www1.chungbuk.go.kr/covid-19/index.do",
+    "세종특별자치시": "https://www.sejong.go.kr/bbs/R3273/list.do?cmsNoStr=17465"
+  }
+}
