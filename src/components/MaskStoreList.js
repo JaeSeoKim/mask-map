@@ -24,7 +24,7 @@ const MaskStoreList = () => {
 
   const scrollUpDelay = 1;
   const scrollUpSpeed = 60;
-  
+
   const scrollUp = () => {
     console.log("scrollUp");
     if (document.documentElement.scrollTop < 1) {
@@ -54,7 +54,9 @@ const MaskStoreList = () => {
               }} style={{ maxWidth: 500, margin: "auto", marginBottom: 13 }}
                 title={value.name} >
                 <div style={{ textAlign: "left" }}>
-                  <p>주소 : {value.addr}</p>
+                  <a href={"https://map.kakao.com/link/map/" + value.name + "," + value.lat + "," + value.lng} target="_blank">
+                    <p>주소 : {value.addr}</p>
+                  </a>
                   <p>마지막 업데이트 : {value.created_at}</p>
                   <p>입고 시간 : {value.stock_at}</p>
                   <p>
