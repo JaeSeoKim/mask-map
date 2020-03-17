@@ -3,6 +3,12 @@
 > 이 프로젝트는 한국 공공데이터 포털에서 제공하는 `건강보험심사평가원_공적 마스크 판매 정보 API` 를 이용하여 제작 하였습니다.
 
 
+
+<Copyright 2020. 김재서. All rights reserved.>
+
+
+
+
 ## ToDo
 
 Geolocation 서비스 지원을 위해 [JaeSeoKim/disaster_message](https://github.com/JaeSeoKim/disaster_message) 와 분리됨 
