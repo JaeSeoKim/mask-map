@@ -126,7 +126,7 @@ const useSetMarker = () => {
 
       // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
       kakao.maps.event.addListener(marker, 'click', function () {
-        console.log(marker.getPosition());
+        kakaoMap.setLevel(4);
         kakaoMap.panTo(new kakao.maps.LatLng(value.lat+0.0013, value.lng));
         customOverlay.setMap(kakaoMap);
       });

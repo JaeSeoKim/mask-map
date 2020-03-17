@@ -19,6 +19,7 @@ const MaskStoreList = () => {
   stores = storeList;
 
   const onclickHandle = (lat, lng) => {
+    kakaoMap.setLevel(4);
     kakaoMap.panTo(new kakao.maps.LatLng(lat, lng));
   };
 
