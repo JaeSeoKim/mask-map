@@ -100,7 +100,7 @@ const useSetMarker = () => {
         `   </div>` +
         `  </div>` +
         `</div>`
-        
+
 
       // 커스텀 오버레이를 생성합니다
       var customOverlay = new kakao.maps.CustomOverlay({
@@ -126,8 +126,15 @@ const useSetMarker = () => {
 
       // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
       kakao.maps.event.addListener(marker, 'click', function () {
-        kakaoMap.setLevel(4);
-        kakaoMap.panTo(new kakao.maps.LatLng(value.lat+0.0013, value.lng));
+        console.log(kakaoMap.getLevel())
+        if (kakaoMap.getLevel() >= 3) {
+          kakaoMap.setLevel(3);
+          kakaoMap.panTo(new kakao.maps.LatLng(value.lat + 0.0010, value.lng));
+        } else if (kakaoMap.getLevel() === 2) {
+          kakaoMap.panTo(new kakao.maps.LatLng(value.lat + 0.0005, value.lng));
+        } else {
+          kakaoMap.panTo(new kakao.maps.LatLng(value.lat + 0.0003, value.lng));
+        }
         customOverlay.setMap(kakaoMap);
       });
 

@@ -26,8 +26,6 @@ const useCenterChanged = () => {
 
         getMaskDataGeo(latlng.getLat(), latlng.getLng(), 3000);
 
-        console.log(latlng.getLat(), latlng.getLng());
-
         setMarker();
 
       });
