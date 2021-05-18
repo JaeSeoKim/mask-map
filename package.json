@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "https://api.dropper.tech",
   "dependencies": {
-    "antd": "^4.3.3",
+    "antd": "^4.15.6",
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
     "cra-template": "1.0.3",
