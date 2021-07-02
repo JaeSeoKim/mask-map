@@ -9,7 +9,7 @@
     "cheerio": "^1.0.0-rc.3",
     "cra-template": "1.0.3",
     "gh-pages": "^3.0.0",
-    "http-proxy-middleware": "^1.0.4",
+    "http-proxy-middleware": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
